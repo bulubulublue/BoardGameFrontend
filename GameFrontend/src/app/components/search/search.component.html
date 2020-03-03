@@ -1,0 +1,7 @@
+<div class="searchOptions">    
+    <button class="searchCategory" (click)="changeOption()" [disabled]="isCategory">Search By Category</button>
+    <button class="searchName" (click)="changeOption()" [disabled]="isName">Search By Name</button>
+</div>
+<div class="searchInput">
+    <input type="text" [(ngModel)]="searchContent" [placeholder]="hint">
+</div>

@@ -1,0 +1,26 @@
+<h1>Game List</h1>
+<app-search #search></app-search>
+<div class="gameList">
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Year</th>
+            <th>Rank</th>
+            <th>Average</th>
+            <th>Details</th>
+            <th>Comments</th>
+        </tr>
+        <tr *ngFor='let game of games | filter:search.isName:search.searchContent'>
+            <td>{{game.ID}}</td>
+            <td>{{game.Name}}</td>
+            <td>{{game.Details[0].boardgamecategory | textFormat}}</td>
+            <td>{{game.Year}}</td>
+            <td>{{game.Rank}}</td>
+            <td>{{game.Average}}</td>
+            <td>view details</td>
+            <td>view comments</td>
+        </tr>
+    </table>
+</div>
